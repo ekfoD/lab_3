@@ -27,38 +27,24 @@ public class InputController {
 
     @FXML
     void sendStudentData(ActionEvent event) throws IOException {
-//        student = new Student(student_name.getText(), student_id.getText(), student_group.getText());
-
+        // issaugom duomenis i singletono student lauka
         SingletonStudent singletonStudent = SingletonStudent.getInstance();
         student = singletonStudent.getStudent();
         student.setName(student_name.getText());
         student.setId(student_id.getText());
         student.setGroup(student_group.getText());
-//        Node node = (Node) event.getSource();
-//        Stage stage = (Stage) node.getScene().getWindow();
-//        stage.setUserData(student);
-//        stage.close();
-//
-//        // try catch
-//        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("output-view.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
-//
-//        stage.setTitle("output");
-//        stage.setScene(scene);
-//        stage.show();
 
+        // uzdarom input langa
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("output2-view.fxml"));
-
+        // uzloadinam output scena ir settinam student tos scenos to Singleton student
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("output-view.fxml"));
         OutputController outputController = new OutputController();
         outputController.setStudent(student);
         fxmlLoader.setController(outputController);
-
-        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
-
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("output");
         stage.setScene(scene);
         stage.show();

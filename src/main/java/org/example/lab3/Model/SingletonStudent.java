@@ -1,8 +1,10 @@
 package org.example.lab3.Model;
 
+import org.example.lab3.Factories.StudentFactory;
+
 public class SingletonStudent {
     private static SingletonStudent instance;
-    private Student student = new Student();
+    private Student student = StudentFactory.getStudent(StudentType.DEFAULT);
 
     private SingletonStudent() {
     }

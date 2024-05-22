@@ -2,9 +2,7 @@ package org.example.lab3.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import org.example.lab3.Model.Student;
 
 public class OutputController {
@@ -21,23 +19,15 @@ public class OutputController {
 
     @FXML
     void getData(ActionEvent event) {
-//        Node node = (Node) event.getSource();
-//        Stage stage = (Stage) node.getScene().getWindow();
-//
-//        student = (Student) stage.getUserData();
         student_name.setText(student.getName());
         student_id.setText(student.getId());
         student_group.setText(student.getGroup());
 
-
-
-    }
-
-    public Student getStudent() {
-        return student;
+        // tiesiog i tuos laukus ideda student info
     }
 
     public void setStudent(Student student) {
+        // kai sukuriamas ir perduoda veikima sitam controlleriui jis jau turi sita student
         this.student = student;
     }
 }

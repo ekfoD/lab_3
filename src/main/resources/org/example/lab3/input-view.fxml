@@ -4,17 +4,32 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab3.Controller.InputController">
    <children>
-      <Button layoutX="281.0" layoutY="277.0" mnemonicParsing="false" onAction="#sendStudentData" text="submit" />
-      <TextField fx:id="student_name" layoutX="55.0" layoutY="187.0" />
-      <TextField fx:id="student_id" layoutX="226.0" layoutY="187.0" />
-      <TextField fx:id="student_group" layoutX="394.0" layoutY="187.0" />
-      <Text layoutX="239.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="studento duomenys" />
-      <Label layoutX="116.0" layoutY="153.0" text="vardas" />
-      <Label layoutX="264.0" layoutY="153.0" text="ID" />
-      <Label layoutX="451.0" layoutY="153.0" text="grupe" />
+      <Button layoutX="262.0" layoutY="277.0" mnemonicParsing="false" onAction="#sendStudentData" prefHeight="40.0" prefWidth="74.0" text="Siųsti" />
+      <TextField fx:id="student_name" layoutX="55.0" layoutY="187.0" AnchorPane.leftAnchor="55.0" />
+      <TextField fx:id="student_id" layoutX="225.0" layoutY="187.0" />
+      <TextField fx:id="student_group" layoutX="394.0" layoutY="187.0" AnchorPane.rightAnchor="55.0" />
+      <Text layoutX="157.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studento duomenys">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font></Text>
+      <Label layoutX="290.0" layoutY="153.0" text="ID">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="440.0" layoutY="153.0" text="Grupė">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="153.0" text="Vardas">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
